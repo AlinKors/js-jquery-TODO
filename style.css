@@ -17,34 +17,55 @@ header{
 }
 
 header,
-form{
+form
+{
     min-height: 20vh;
     align-items: center;
     display: flex;
     justify-content: center;
-
 }
 
+
+
 form input{
-    padding: 0.5rem;
-    border: none;
-    outline:none;
+    position: absolute;
     font-size: 1.5rem;
     background: white;
     cursor: text;
-    min-width: 70vh;
-    box-shadow: -10px 20px 40px 0px rgba(0, 0, 0, 0.2);
-    
+    min-width: 500px;
+    box-shadow: -10px 20px 40px 0px rgba(0, 0, 0, 0.2),
+    -5px 5px 5px 0px rgba(0, 0, 0, 0.1);;
 }
 
 ::placeholder {
     color: #e6e6e6;
     font-size: 1.5rem;
     font-style: italic;
-    
   }
 
-form input[type=text]{
-    padding-left: 1.5rem;
+input[type='text']{
+    padding-left: 2.5rem;
+}
+
+form input,
+form button
+{
+    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    outline:none;
+    font-size: 1.5rem;
+    background: white;
+    margin: 0px;
+    padding: auto;
+}
+
+form button{
+    position: relative;
+    cursor: pointer;
+    color: #e6e6e6;
+    z-index: 1;
+    right: 14.5rem;
 }
 
