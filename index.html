@@ -7,33 +7,56 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./checkbox.css">
 
 
 </head>
 <body>
     <header>
         <h1>todos</h1>
-    </header>
-    
+    </header>  
+<div class="main-box">
     <form class="box">
-        <!-- <button type="submit" class="select-all-button">
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </button> -->
+            <button type="submit" class="select-all-button">
+                <img src="down.svg" width="22" height="22" alt="image description">
+            </button>
             <input type="text" class="input-todo" placeholder="What needs to be done?">
     </form> 
+    <template id="tmp-todo-container">
     <div class="todo-list-container">
         <ul class="todo-list">
             <div class="new-case-container">
+                <template id="tmp1">
                 <li class="new-case">
-                    <label>
-                        <input type="checkbox">
-                        Checkbox
+                    <label class="checkbox-select">
+                        <input type="checkbox" class="input-check">
+                        <span class="text-check">item 1</span>
                     </label>
+                    <button class="delete-check">
+                        <img src="close.svg"  alt="image description">
+                    </button>
                 </li>
+                </template>
             </div>
         </ul>
     </div>
-
+    <div class="menu-buttons">
+        <div class="items-count">4 items left</div>
+        <div class="menu-checked">
+            <button class="button-all">All</button>
+            <button class="button-active">Active</button>
+            <button class="button-completed">Completed</button>
+        </div>
+        <div class="box-button">       
+            <button class="button-clear">Clear completed</button>
+        </div>
+    </div>
+    </template>
+</div>
+<template id="tmp2">
+<div class="box-footer one"></div>
+<div class="box-footer two"></div>
+</template>
     <script src="./app.js"></script>
 </body>
 </html>
