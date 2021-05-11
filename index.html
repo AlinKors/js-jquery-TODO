@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./checkbox.css">
-
-
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
 </head>
 <body>
     <header>
@@ -17,20 +17,22 @@
     </header>  
 <div class="main-box">
     <form class="box">
-            <button type="submit" class="select-all-button">
+            <template id="tmpButtonAll">
+            <button class="select-all-button">
                 <img src="down.svg" width="22" height="22" alt="image description">
             </button>
+        </template>
             <input type="text" class="input-todo" placeholder="What needs to be done?">
     </form> 
-    <template id="tmp-todo-container">
+    <template id="tmpTodoContainer">
     <div class="todo-list-container">
         <ul class="todo-list">
             <div class="new-case-container">
-                <template id="tmp1">
+                <template id="tmpNewCase">
                 <li class="new-case">
                     <label class="checkbox-select">
-                        <input type="checkbox" class="input-check">
-                        <span class="text-check">item 1</span>
+                        <input type="checkbox" class="input-check" onclick="buttonCheck()">
+                        <span class="text-check"></span>
                     </label>
                     <button class="delete-check">
                         <img src="close.svg"  alt="image description">
@@ -40,10 +42,12 @@
             </div>
         </ul>
     </div>
+    </template>
+    <template id="tmpMenuButtons">
     <div class="menu-buttons">
-        <div class="items-count">4 items left</div>
+        <div class="items-count"></div>
         <div class="menu-checked">
-            <button class="button-all">All</button>
+            <button class="button-all" active>All</button>
             <button class="button-active">Active</button>
             <button class="button-completed">Completed</button>
         </div>
@@ -53,7 +57,7 @@
     </div>
     </template>
 </div>
-<template id="tmp2">
+<template id="tmpFooter">
 <div class="box-footer one"></div>
 <div class="box-footer two"></div>
 </template>
